@@ -35,11 +35,20 @@ int main (){
         printf("El resultado de la division es: %d",aux); 
         break;
         case 4:
-        
+        scanf("%i %i",&a,&b);
+        aux=multi(a,b);
+        printf("El resultado de la multiplicación es: %d",aux); 
         break;
         case 5:
+        printf("Ingresa la base:");
+        scanf("%i",&a);
+        printf("\nIngresa el exponente:");
+        scanf("%i",&b);
+        aux=pote(a,b);
+        printf("El resultado de la potenciacion es: %d",aux);
         break;
         default:
+        printf("Opcion no valida ):");
         break;
     }
 }
@@ -58,4 +67,13 @@ float divi(int a, int b){
 
 int multi(int a, int b){
     return a*b;
+}
+
+int pote(int a, int b){
+    int i=0;
+    int acum=1;
+    for(i=0;i<b;i++){
+        acum=acum*a;
+    }
+    return acum;
 }
