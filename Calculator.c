@@ -4,13 +4,12 @@ int suma(int a, int b);
 int resta(int a, int b);
 float divi(int a, int b);
 int multi(int a,int b);
-int pote(int x,int n);
+int pote(int a,int b);
 
 int main (){
     int a=0;
     int b=0;
-    int sum=0;
-    int res=0;
+    int aux=0;
     int opc=0;
     printf("Elige la opción:\n");
     printf("1. Suma\n");
@@ -22,17 +21,21 @@ int main (){
     switch(opc){
         case 1:
         scanf("%i %i",&a,&b);
-        sum=suma(a,b);
-        printf("El resultado de la suma es: %d",sum); 
+        aux=suma(a,b);
+        printf("El resultado de la suma es: %d",aux); 
         break;
         case 2:
         scanf("%i %i",&a,&b);
-        res=resta(a,b);
-        printf("El resultado de la suma es: %d",res); 
+        aux=resta(a,b);
+        printf("El resultado de la resta es: %d",aux); 
         break;
         case 3:
+        scanf("%i %i",&a,&b);
+        aux=divi(a,b);
+        printf("El resultado de la division es: %d",aux); 
         break;
         case 4:
+        
         break;
         case 5:
         break;
@@ -44,6 +47,15 @@ int main (){
 int suma(int a, int b){
     return a+b;
 }
+
 int resta(int a, int b){
     return a-b;
+}
+
+float divi(int a, int b){
+    return a/b;
+}
+
+int multi(int a, int b){
+    return a*b;
 }
